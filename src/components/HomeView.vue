@@ -116,9 +116,9 @@ const checkConnection = async () => {
    */
 
   // connected.value = true
-   const response = await axios.get("test");
+   
 
-   let status = response.data.status
+   let status = "";
 
     if(status){
         connected.value = true;
@@ -126,7 +126,6 @@ const checkConnection = async () => {
       connected.value = false;
     }
 
-    console.log(response);
 }
 
 
