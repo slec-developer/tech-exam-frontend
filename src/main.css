@@ -1,18 +1,18 @@
 body {
     margin: 0;
-    background: #f4f7fb;
     font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
-    padding: 40px;
+    padding: 40px 20px;
 }
 
 h1 {
     color: #1f2937;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .subtitle {
@@ -25,16 +25,21 @@ h1 {
     border-radius: 10px;
     padding: 25px;
     margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.description {
+    color: #6b7280;
+    margin-bottom: 20px;
 }
 
 .status-btn {
     border: none;
-    padding: 12px 35px;
+    padding: 12px 25px;
     border-radius: 6px;
     color: white;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     transition: .3s;
 }
 
@@ -46,29 +51,77 @@ h1 {
     background: #16a34a;
 }
 
-.description {
-    margin-top: 15px;
-    color: #555;
+.status-btn:hover {
+    opacity: .9;
 }
 
 .task-list {
     line-height: 1.8;
+    padding-left: 22px;
 }
 
-.task-list li {
-    margin-bottom: 25px;
+.task-list>li {
+    margin-bottom: 30px;
+}
+
+.task-list strong {
+    color: #1e3a8a;
+}
+
+.task-list ul {
+    margin-top: 10px;
 }
 
 .page-link {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 12px;
     text-decoration: none;
-    background: #2563eb;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 5px;
+    color: #2563eb;
+    font-weight: bold;
 }
 
 .page-link:hover {
-    background: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* Percentage badge */
+.task-list strong:first-child {
+    display: inline-block;
+    background: #eef4ff;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+.container{
+    padding:15px;
+}
+
+.card{
+    padding:18px;
+}
+
+h1{
+    font-size:28px;
+}
+
+.task-list{
+    padding-left:18px;
+}
+
+.status-btn{
+    width:100%;
+}
+
+}
+
+/* Tablet */
+@media (min-width:577px) and (max-width:991px){
+
+.container{
+    padding:25px;
+}
+
 }
